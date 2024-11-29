@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+     font-family: 'IBM Plex Serif';
+/*     font-family: Arial, sans-serif; */
+    background-color: #3ec0c1;
     margin: 0;
     padding: 0;
 }
@@ -33,7 +34,7 @@ h1 {
 }
 
 .subject-header:hover, .unit-header:hover {
-    background-color: #eee;
+    background-color: #ee7311;
 }
 
 .subject-content, .unit-content {
