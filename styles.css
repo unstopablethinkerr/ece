@@ -39,14 +39,14 @@ h1 {
 
 .subject-header, .unit-header {
     cursor: pointer;
-    padding: 20px;
+    padding: 15px;
     background: linear-gradient(120deg, #6f42c1, #007bff);
     color: #ffffff;
-    font-weight: 300;
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2em;
+    font-size: 0.8em;
     transition: background 0.3s ease-in-out;
 }
 
