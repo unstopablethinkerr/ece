@@ -1,81 +1,192 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #007bff, #6610f2);
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #333;
 }
 
 .container {
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    font-size: 3em;
-    font-weight: 700;
-    color: #212529;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
 }
 
 .subject, .unit {
-    margin-bottom: 30px;
-    border: 2px solid #e9ecef;
-    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .subject:hover, .unit:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.subject-header, .unit-header {
-    cursor: pointer;
+/* Subject Header Styling */
+.subject-header {
     padding: 15px;
-    background: linear-gradient(120deg, #6f42c1, #007bff);
-    color: #ffffff;
-    font-weight: 200;
+    background-color: #28a745; /* Green for subject headers */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    font-size: 0.8em;
-    transition: background 0.3s ease-in-out;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.subject-header:hover, .unit-header:hover {
-    background: linear-gradient(120deg, #007bff, #6610f2);
+.subject-header:hover {
+    background-color: #218838;
+}
+
+/* Unit Header Styling */
+.unit-header {
+    padding: 15px;
+    background-color: #ffc107; /* Yellow for unit headers */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.unit-header:hover {
+    background-color: #e0a800;
 }
 
 .subject-content, .unit-content {
     display: none;
-    padding: 20px;
-    background: #f8f9fa;
-    color: #495057;
-    border-top: 1px solid #e9ecef;
-    font-size: 1em;
-    line-height: 1.6;
+    padding: 15px;
+    background: #fafafa;
+    color: #444;
+    border-top: 1px solid #ddd;
 }
 
 .topic {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #e2e6ea;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #e9ecef;
     border-left: 5px solid #007bff;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 1em;
-    font-weight: 500;
-    transition: background 0.3s ease-in-out, border-left 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .topic:hover {
-    background: #d6dbdf;
-    border-left: 5px solid #6610f2;
+    background: #d6e9ff;
+    border-left-color: #0056b3;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.subject, .unit {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.subject:hover, .unit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Subject Header Styling */
+.subject-header {
+    padding: 15px;
+    background-color: #28a745; /* Green for subject headers */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.subject-header:hover {
+    background-color: #218838;
+}
+
+/* Unit Header Styling */
+.unit-header {
+    padding: 15px;
+    background-color: #ffc107; /* Yellow for unit headers */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.unit-header:hover {
+    background-color: #e0a800;
+}
+
+.subject-content, .unit-content {
+    display: none;
+    padding: 15px;
+    background: #fafafa;
+    color: #444;
+    border-top: 1px solid #ddd;
+}
+
+.topic {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #e9ecef;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.topic:hover {
+    background: #d6e9ff;
+    border-left-color: #0056b3;
 }
