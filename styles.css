@@ -1,12 +1,20 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #007bff, #6610f2);
+    background: #f4f4f9;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.site-header {
+    background: #007bff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .layout {
@@ -29,6 +37,7 @@ body {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 20px;
+    color: #007bff;
 }
 
 .sidebar-menu {
@@ -59,11 +68,10 @@ body {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-}
-
-.content header {
-    text-align: center;
-    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .subject {
