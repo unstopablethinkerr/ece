@@ -17,6 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function toggleContent(content) {
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
     }
 });
