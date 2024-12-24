@@ -39,7 +39,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    border-radius: 7.5 px;
+    border-radius: 15 px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
