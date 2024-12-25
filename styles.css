@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 /* Body Styles */
 body {
@@ -9,7 +9,7 @@ body {
     padding: 0;
     color: #ffffff;
     animation: gradientAnimation 10s ease infinite;
-    overflow: hidden;
+    overflow: auto; /* Ensure scrolling is enabled */
 }
 
 /* Gradient Animation */
@@ -60,7 +60,6 @@ h1 {
         transform: translateY(0);
     }
 }
-
 
 /* Subject Header Styles */
 .subject-header {
@@ -143,7 +142,6 @@ h1 {
 .subject-header:hover span::before {
     transform: scaleX(1);
 }
-
 
 /* Unit Header Styles */
 .unit-header {
@@ -242,5 +240,24 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .subject-header, .unit-header, .topic {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .subject-content, .unit-content {
+        padding: 15px;
+        font-size: 0.8em;
     }
 }
