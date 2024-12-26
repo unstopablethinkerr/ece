@@ -1,19 +1,19 @@
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* Body Styles */
 body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d9a7c7, #fffcdc);
     background-size: 400% 400%;
     margin: 0;
     padding: 0;
-    color: #ffffff;
-    animation: gradientAnimation 10s ease infinite;
-    overflow: auto; /* Ensure scrolling is enabled */
+    color: #333;
+    animation: gradientBackground 10s ease infinite;
+    overflow: auto;
 }
 
-/* Gradient Animation */
-@keyframes gradientAnimation {
+/* Background Animation */
+@keyframes gradientBackground {
     0% {
         background-position: 0% 50%;
     }
@@ -25,37 +25,37 @@ body {
     }
 }
 
-/* Container Styles */
+/* Container */
 .container {
-    max-width: 960px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Inter', sans-serif; /* Ensure the container uses the Inter font */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Heading Styles */
 h1 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Inter', sans-serif; /* Ensure the heading uses the Inter font */
-    animation: fadeInDown 1s ease-out; /* Add a fade-in animation */
+    color: #444;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Fade In Animations */
-@keyframes fadeInDown {
-    0% {
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
         opacity: 0;
         transform: translateY(-20px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -63,176 +63,79 @@ h1 {
 
 /* Subject Header Styles */
 .subject-header {
-    cursor: pointer;
-    padding: 15px;
-    background: linear-gradient(120deg, #007bff, #6610f2, #007bff);
-    background-size: 200% 200%;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease, background-position 0.5s ease;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7);
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
 .subject-header:hover {
-    background-position: 100% 0;
+    background: #f9f9f9;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.subject-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: skewX(-45deg);
-    transition: left 0.5s ease;
-}
-
-.subject-header:hover::before {
-    left: 100%;
-}
-
-.subject-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.subject-header:hover::after {
-    opacity: 1;
-}
-
-.subject-header span {
-    position: relative;
-    z-index: 1;
-}
-
-.subject-header span::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.subject-header:hover span::before {
-    transform: scaleX(1);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.1), -12px -12px 20px rgba(255, 255, 255, 0.7);
 }
 
 /* Unit Header Styles */
 .unit-header {
-    cursor: pointer;
     padding: 15px;
-    background: linear-gradient(to right, #6f42c1, #e83e8c);
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 1em;
-    border-radius: 8px;
     margin-bottom: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .unit-header:hover {
-    background: linear-gradient(to right, #e83e8c, #6f42c1);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.unit-header::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: skewY(-45deg);
-    transition: top 0.5s ease;
-}
-
-.unit-header:hover::after {
-    top: 100%;
-}
-
-/* Subject and Unit Content */
-.subject-content, .unit-content {
+/* Subject Content */
+.subject-content {
     display: none;
     padding: 20px;
-    background: #f7f9fc;
-    color: #333;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 4px solid #66a6ff;
+    border-radius: 10px;
+    color: #555;
     font-size: 0.9em;
-    line-height: 1.6;
-    animation: fadeIn 0.3s ease;
-    border-left: 6px solid #007bff;
-    border-radius: 0 12px 12px 0;
+    animation: slideDown 0.3s ease-in-out;
 }
 
 /* Topic Styles */
 .topic {
-    margin-bottom: 15px;
     padding: 15px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #ffffff;
-    border-left: 6px solid #ff6f61;
-    border-radius: 6px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7);
     font-size: 1em;
     font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    color: #444;
+    transition: all 0.3s ease;
 }
 
 .topic:hover {
-    background: linear-gradient(to right, #feb47b, #ff7e5f);
     transform: translateX(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.1), -12px -12px 20px rgba(255, 255, 255, 0.8);
 }
 
-.topic::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-45deg);
-    transition: left 0.4s ease;
-}
-
-.topic:hover::after {
-    left: 100%;
-}
-
-/* Fade-In Animation for Content */
-@keyframes fadeIn {
+/* Slide Down Animation */
+@keyframes slideDown {
     from {
         opacity: 0;
         transform: translateY(-10px);
@@ -246,18 +149,16 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
-        margin: 20px;
+        padding: 20px;
     }
     h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     .subject-header, .unit-header, .topic {
         font-size: 1em;
         padding: 10px;
     }
-    .subject-content, .unit-content {
-        padding: 15px;
-        font-size: 0.8em;
+    .subject-content {
+        font-size: 0.85em;
     }
 }
