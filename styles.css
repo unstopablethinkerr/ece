@@ -164,7 +164,6 @@ h1 {
 }
 
 
-/* Smooth Transition for Content */
 .subject-content, .unit-content {
     max-height: 0;
     overflow: hidden;
@@ -172,11 +171,10 @@ h1 {
 }
 
 .subject-content.visible, .unit-content.visible {
-    max-height: 500px; /* Adjust based on content size */
-    padding: 10px; /* Add padding when visible */
+    max-height: 1000px; /* Large enough to fit content */
+    padding: 10px;
 }
 
-/* Styling for Past Exam Headers */
 .past-exam {
     background: linear-gradient(to right, #ff0000, #ff5555);
     color: #ffffff;
