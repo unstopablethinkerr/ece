@@ -17,12 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function toggleContent(content) {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        content.classList.toggle('visible');
     }
 
-    const headers = document.querySelectorAll('.subject-header');
-
-    headers.forEach(header => {
+    subjectHeaders.forEach(header => {
         const dateText = header.textContent.match(/\d{2}-\d{2}-\d{4}/);
         if (dateText) {
             const examDate = new Date(dateText[0].split('-').reverse().join('-'));
