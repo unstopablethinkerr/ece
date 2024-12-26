@@ -1,13 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Select all headers
     const subjectHeaders = document.querySelectorAll('.subject-header');
     const unitHeaders = document.querySelectorAll('.unit-header');
 
+    // Function to toggle content visibility
     function toggleContent(content) {
-        content.classList.toggle('visible'); // Add or remove class for animations
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            content.style.padding = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.padding = '10px';
+        }
     }
 
-    // Toggle visibility for content on header click
-    [...subjectHeaders, ...unitHeaders].forEach(header => {
+    // Toggle subject content
+    subjectHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            toggleContent(content);
+        });
+    });
+
+    // Toggle unit content
+    unitHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const content = header.nextElementSibling;
             toggleContent(content);
@@ -22,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const today = new Date();
 
             if (examDate < today) {
-                header.classList.add('past-exam'); // Add a class for styling past exams
+                header.classList.add('past-exam');
                 header.style.cursor = 'not-allowed';
             }
         }
