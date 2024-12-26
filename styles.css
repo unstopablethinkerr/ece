@@ -162,3 +162,23 @@ h1 {
         font-size: 0.85em;
     }
 }
+
+
+/* Smooth Transition for Content */
+.subject-content, .unit-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.subject-content.visible, .unit-content.visible {
+    max-height: 500px; /* Adjust based on content size */
+    padding: 10px; /* Add padding when visible */
+}
+
+/* Styling for Past Exam Headers */
+.past-exam {
+    background: linear-gradient(to right, #ff0000, #ff5555);
+    color: #ffffff;
+    pointer-events: none; /* Disable interaction */
+}
