@@ -10,6 +10,7 @@ body {
     color: #f4f4f4; /* Light text for contrast */
     animation: gradientBackground 10s ease infinite;
     overflow: auto;
+    line-height: 1.6; /* Improve readability */
 }
 
 /* Background Animation */
@@ -27,11 +28,11 @@ body {
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 900px; /* Slightly wider container for ergonomic readability */
     margin: 40px auto;
-    padding: 30px;
+    padding: 40px;
     background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px); /* Increased blur for better contrast */
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -40,10 +41,10 @@ body {
 /* Heading Styles */
 h1 {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 3em; /* Larger heading for better focus */
     font-weight: 700;
     color: #f4f4f4; /* Light color for contrast */
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-transform: capitalize;
     letter-spacing: 1px;
     animation: fadeIn 1s ease-in-out;
@@ -63,13 +64,13 @@ h1 {
 
 /* Subject Header Styles */
 .subject-header {
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 20px;
     background: #33475b; /* Dark slate */
     border-radius: 15px;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.1);
     color: #e7e7e7; /* Light text */
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
     text-transform: uppercase;
     display: flex;
@@ -87,12 +88,12 @@ h1 {
 
 /* Unit Header Styles */
 .unit-header {
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
     background: linear-gradient(135deg, #4caf50, #81c784); /* Green gradient */
     color: #ffffff;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
@@ -122,22 +123,22 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .unit-content.visible {
     max-height: 1000px; /* Large enough to fit content */
-    padding: 15px;
+    padding: 20px;
 }
 
 /* Topic Styles */
 .topic {
-    padding: 15px;
+    padding: 20px; /* Increased padding for better readability */
     margin-bottom: 15px;
     background: #424242; /* Neutral dark background */
     border-radius: 10px;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.1);
-    font-size: 1em;
+    font-size: 1.1em; /* Larger font for better visibility */
     font-weight: 600;
     color: #e0e0e0; /* Light color for readability */
     transition: all 0.3s ease;
@@ -162,6 +163,22 @@ h1 {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2.5em; /* Slightly smaller heading for medium screens */
+    }
+    .subject-header, .unit-header, .topic {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+    .subject-content, .unit-content {
+        font-size: 1em;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -171,13 +188,14 @@ h1 {
     }
     .subject-header, .unit-header, .topic {
         font-size: 1em;
-        padding: 10px;
+        padding: 12px;
     }
-    .subject-content {
-        font-size: 0.85em;
+    .subject-content, .unit-content {
+        font-size: 0.9em;
     }
 }
 
+/* Disabled/Non-interactive Past Exam Section */
 .past-exam {
     background: linear-gradient(to right, #ff5722, #ff7043); /* Vibrant red-orange */
     color: #ffffff;
