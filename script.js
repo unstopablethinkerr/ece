@@ -25,11 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dateText) {
             const examDate = new Date(dateText[0].split('-').reverse().join('-'));
             const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(today.getDate() + 1);
+          
             
 
-            if (examDate < tomorrow) {
+            if (examDate < today) {
                 header.style.background = 'linear-gradient(to right, #ff0000, #ff5555)';
                 header.style.color = '#ffffff';
                 header.style.cursor = 'not-allowed';
