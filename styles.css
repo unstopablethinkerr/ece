@@ -35,7 +35,7 @@ body {
     backdrop-filter: blur(15px); /* Increased blur for better contrast */
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Heading Styles */
