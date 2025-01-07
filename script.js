@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
 
             if (examDate < today) {
-                header.style.background = 'linear-gradient(to right, #ff0000, #ff5555)';
-                header.style.color = '#ffffff';
+             //   header.style.background = 'linear-gradient(to right, #ff0000, #ff5555)';
+             //   header.style.color = '#ffffff';
               //  header.style.cursor = 'not-allowed';
-header.style.display ='none';
-                header.classList.add('past-exam');
+//header.style.display ='none';
+              //  header.classList.add('past-exam');
             }
         }
     });
